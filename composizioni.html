@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="it"><head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Le mie Composizioni</title>
+     <style>
+         body {
+             font-family: sans-serif;
+             margin: 0;
+             background-color: #e0f2f7; /* Verde acqua chiaro */
+             color: #333;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             min-height: 100vh;
+             padding-top: 20px;
+             box-sizing: border-box;
+         }
+         header {
+             background-color: rgba(255, 255, 255, 0.8);
+             padding: 15px 20px;
+             border-radius: 10px;
+             text-align: center;
+             margin-bottom: 20px;
+             border-bottom: 3px solid #4dd0e1; /* Verde acqua */
+         }
+         header h1 {
+             color: #00bcd4; /* Ciano */
+             margin-top: 10px;
+         }
+         .composizioni-container {
+             background-color: rgba(255, 255, 255, 0.7);
+             padding: 30px;
+             border-radius: 15px;
+             text-align: center;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+             border: 2px solid #4dd0e1; /* Verde acqua */
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         .composizione-box {
+             background-color: #fff;
+             border: 2px solid #80deea; /* Azzurro tenue */
+             border-radius: 8px;
+             padding: 20px;
+             margin-bottom: 20px;
+             text-align: center;
+             cursor: pointer;
+             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+         }
+         .composizione-box:hover {
+             transform: scale(1.05);
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+         }
+         .composizione-box h3 {
+             color: #00bcd4; /* Ciano */
+             margin-top: 0;
+         }
+         .back-button {
+             display: block;
+             width: 150px;
+             padding: 10px 15px;
+             font-size: 1em;
+             border: 1px solid #00bcd4;
+             border-radius: 5px;
+             cursor: pointer;
+             background-color: #fff;
+             color: #00bcd4;
+             text-align: center;
+             text-decoration: none;
+             margin-top: 20px;
+             transition: background-color 0.3s ease;
+         }
+         .back-button:hover {
+             background-color: #b2ebf2;
+         }
+     </style></head><body>
+     <header>
+         <h1>Le mie Composizioni</h1>
+     </header>
+
+     <div class="composizioni-container">
+         <img src="penta.jpg" alt="Spartito musicale" style="float: right; margin-left: 20px; max-width: 300px;">
+         <div class="composizione-box"> <h3>L'ultimo Saluto</h3> 
+         <button onclick="playAudio('ultimosaluto.mp3')">Play</button> <button onclick="pauseAudio()">Pausa</button> </div> 
+         <audio id="audioPlayer" style="display: none;">
+         </audio> 
+         <script> 
+         var audioPlayer = document.getElementById('audioPlayer'); function playAudio(audioFile) { audioPlayer.src = audioFile; audioPlayer.play(); } function pauseAudio() { audioPlayer.pause(); } </script>
+                  <div class="composizione-box" <div class="composizione-box">
+    <h3>Cuore di Passione</h3>
+    <button onclick="playAudio('cuoredipassione.mp3')">Play</button>
+    <button onclick="pauseAudio()">Pausa</button>
+</div>
+
+<audio id="audioPlayer" style="display: none;"></audio>
+
+<script>
+var audioPlayer = document.getElementById('audioPlayer');
+
+function playAudio(audioFile) {
+  audioPlayer.src = audioFile;
+  audioPlayer.play();
+}
+
+function pauseAudio() {
+  audioPlayer.pause();
+}
+</script>         <a href="homepage.html" class="back-button">Torna alla Homepage</a>
+     </div></body></html>
